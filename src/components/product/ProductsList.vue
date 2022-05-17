@@ -23,7 +23,7 @@ import ItemCard from "../base/ItemCard.vue";
 import ItemCardModal from "../base/ItemCard_Modal.vue";
 import Modal from "../base/Modal.vue";
 import Loader from "../base/PageLoader.vue";
-
+import config from '../../../config'
 export default {
   components: {
     ItemCard,
@@ -48,7 +48,7 @@ export default {
       this.showItemModal = !this.showItemModal;
     },
     async getProducts() {
-      this.products = await ((await fetch(`${process.env.VUE_APP_URL}/products`)).json())
+      this.products = await ((await fetch(`${config.API_URL}/products`)).json())
     },
   },
 };

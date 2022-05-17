@@ -1,6 +1,6 @@
 <template>
-    <aside class="z-[1000]">
-        <div v-if="show" class="w-full h-full fixed top-0 left-0 bg-black opacity-75  z-[1000]" @click="tryClose"></div>
+    <aside>
+        <div v-if="show" class="w-full h-full fixed top-0 left-0 bg-black opacity-75 cursor-pointer z-[1000]" @click="tryClose"></div>
         <transition name="modal">
             <dialog
                 class="z-[1001] w-full p-0 shadow-sm max-h-full top-20 overflow-hidden fixed bg-white md:w-1/2 alert-modal right-0 left-0 mx-auto rounded-lg"

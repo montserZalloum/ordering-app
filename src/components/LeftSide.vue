@@ -23,6 +23,7 @@
     import Modal from "./base/Modal.vue";
     import Loader from "./base/PageLoader.vue";
     import OrderSummary from './order/OrderSummary.vue'
+    import config from '../../config'
     export default {
         components: {
             Card,
@@ -51,7 +52,7 @@
              async placeOrder() {
                  this.isLoading = true;
                  try {
-                     await fetch(`${process.env.VUE_APP_URL}/orders`,{
+                     await fetch(`${config.API_URL}/orders`,{
                          method: 'POST',
                          headers: {
                              'Content-Type': 'application/json'
